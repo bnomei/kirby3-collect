@@ -7,7 +7,7 @@
 [![Maintainability](https://flat.badgen.net/codeclimate/maintainability/bnomei/kirby3-collect)](https://codeclimate.com/github/bnomei/kirby3-collect) 
 [![Twitter](https://flat.badgen.net/badge/twitter/bnomei?color=66d9ef)](https://twitter.com/bnomei)
 
-Extends Kirby collections with all Laravel collection methods
+Adds support for Laravel collections to Kirby
 
 ## Commercial Usage
 
