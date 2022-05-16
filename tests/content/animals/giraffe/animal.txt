@@ -1,0 +1,13 @@
+title: Giraffe
+
+----
+
+speed: 30
+
+----
+
+tags: yellow, black
+
+----
+
+name: not-simba

@@ -1,0 +1,13 @@
+title: Lion
+
+----
+
+speed: 40
+
+----
+
+tags: golden, brown
+
+----
+
+name: simba
