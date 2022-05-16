@@ -1,6 +1,6 @@
 {
   "name": "bnomei/kirby3-collect",
-  "description": "Extends Kirby collections with all Laravel collection methods",
+  "description": "Adds support for Laravel collections to Kirby",
   "type": "kirby-plugin",
   "version": "1.0.0",
   "license": "MIT",
