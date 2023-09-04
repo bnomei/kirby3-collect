@@ -33,25 +33,18 @@ class ComposerAutoloaderInit2f61e473f5b4f1a369073aa96bd17762
 
         $loader->register(true);
 
-        $includeFiles = \Composer\Autoload\ComposerStaticInit2f61e473f5b4f1a369073aa96bd17762::$files;
-        foreach ($includeFiles as $fileIdentifier => $file) {
-            composerRequire2f61e473f5b4f1a369073aa96bd17762($fileIdentifier, $file);
+        $filesToLoad = \Composer\Autoload\ComposerStaticInit2f61e473f5b4f1a369073aa96bd17762::$files;
+        $requireFile = \Closure::bind(static function ($fileIdentifier, $file) {
+            if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
+                $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+
+                require $file;
+            }
+        }, null, null);
+        foreach ($filesToLoad as $fileIdentifier => $file) {
+            $requireFile($fileIdentifier, $file);
         }
 
         return $loader;
-    }
-}
-
-/**
- * @param string $fileIdentifier
- * @param string $file
- * @return void
- */
-function composerRequire2f61e473f5b4f1a369073aa96bd17762($fileIdentifier, $file)
-{
-    if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-        $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
-
-        require $file;
     }
 }
